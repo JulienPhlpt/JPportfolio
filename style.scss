@@ -1,8 +1,10 @@
 body {
   height: 100vh;
   margin: 0;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background: #f7f7f7;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 ul {
@@ -20,10 +22,10 @@ img {
 }
 
 $primary-color: #08415c;
-$primary-darker-color: #07354b;
-$secondary-color: #15a0e0;
+$primary-darker-color: #083a51;
+$secondary-color: #db504a;
 $tertiary-color: #fca311;
-$detail-color: #a0e4e4;
+$detail-color: #b6dbe2;
 $light-background-color: #f7f7f7;
 
 $github-color: #242a2e;
@@ -38,9 +40,75 @@ $twitter-color: #1fa1f1;
   a {
     color: white;
   }
+}
 
-  .nav-link {
-    display: none;
+.nav-container {
+  position: fixed;
+  z-index: 5;
+  width: -webkit-fill-available;
+
+  .burger {
+    display: block;
+    cursor: pointer;
+
+    div {
+      width: 25px;
+      height: 2px;
+      background: $light-background-color;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    top: 12vh;
+    height: 90vh;
+    background: $primary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+
+    body {
+      overflow: hidden;
+    }
+    li {
+      opacity: 0;
+    }
+  }
+}
+
+.toggle {
+  .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+
+  .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+}
+.nav-container .nav-acvtive {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
   }
 }
 
@@ -51,12 +119,14 @@ $twitter-color: #1fa1f1;
 
   .logo {
     color: $tertiary-color;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
   }
 
   ul {
-    display: flex;
+    display: none;
 
     a {
       display: block;
@@ -64,7 +134,7 @@ $twitter-color: #1fa1f1;
       transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
       &:hover {
-        color: $tertiary-color;
+        color: $detail-color;
         transform: translateY(-2px);
         transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
       }
@@ -119,14 +189,15 @@ $twitter-color: #1fa1f1;
   color: white;
   display: grid;
   text-align: center;
-  padding: 4em;
+  padding: 10em 4em 4em 4em;
 }
 
 .meet {
   display: flex;
   margin: 0 auto;
-  width: 200px;
-  font-weight: bold;
+  width: 220px;
+  font-size: 1.2em;
+  font-weight: 400;
   color: $secondary-color;
 
   span {
@@ -199,8 +270,8 @@ section {
   transition: box-shadow 0.4s ease-in-out 0s;
 
   &:hover {
-    box-shadow: rgba(#a0e4e4, 0.5) 0px 2px 0px 0px,
-      rgba(#a0e4e4, 0.5) 0px -0.8em 0px 0px inset;
+    box-shadow: rgba($tertiary-color, 0.4) 0px 2px 0px 0px,
+      rgba($tertiary-color, 0.4) 0px -0.8em 0px 0px inset;
     transition: box-shadow 0.4s ease-in-out 0s;
   }
 }
@@ -215,7 +286,7 @@ section {
 
 // SKILLS **********************************************************************
 .skills {
-  background: $tertiary-color;
+  background: $secondary-color;
 
   img {
     width: 100%;
@@ -242,7 +313,8 @@ section {
       width: 100px;
     }
   }
-  .skilss-title {
+
+  .skill-title {
     font-weight: bold;
   }
 
@@ -281,8 +353,10 @@ section {
 
   .logo {
     color: $tertiary-color;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
   }
 
   ul {
@@ -294,7 +368,7 @@ section {
       transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
       &:hover {
-        color: $tertiary-color;
+        color: $detail-color;
         transform: translateX(-2px);
         transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
       }
@@ -307,8 +381,7 @@ section {
     justify-content: space-between;
 
     p {
-      color: white;
-      opacity: 0.5;
+      color: rgba(white, 0.7);
     }
   }
 }
@@ -339,7 +412,7 @@ section {
 
 .copyright-mobile {
   background: $primary-darker-color;
-  color: rgba(white, 0.5);
+  color: rgba(white, 0.7);
   margin: 0;
   padding: 0 2em 2em;
 
@@ -362,7 +435,29 @@ section {
   }
 }
 
-@media only screen and (min-width: 520px) {
+@media only screen and (min-width: 550px) {
+  .nav-container {
+    position: unset;
+
+    .burger {
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  .header ul {
+    display: flex;
+  }
+
+  .hero {
+    padding: 4em 4em 4em 4em;
+  }
+
   .footer ul {
     display: flex;
 
@@ -372,17 +467,14 @@ section {
       transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
       &:hover {
-        color: $tertiary-color;
+        color: $detail-color;
         transform: translateY(-2px);
         transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
       }
     }
   }
-
-  .nav-container .nav-link {
-    display: unset;
-  }
 }
+
 @media only screen and (min-width: 800px) {
   .featured,
   .portfolio {
@@ -417,6 +509,7 @@ section {
     grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
   }
+
   .portfolio {
     padding-top: 7em;
   }
@@ -517,6 +610,7 @@ section {
       background: $primary-color;
     }
   }
+
   .copyright-mobile {
     display: none;
   }
