@@ -23,9 +23,9 @@ img {
 
 $primary-color: #08415c;
 $primary-darker-color: #083a51;
-$secondary-color: #db504a;
-$tertiary-color: #fca311;
-$detail-color: #b6dbe2;
+$secondary-color: #ff5c5c;
+$tertiary-color: #ffc500;
+$detail-color: #74958a;
 $light-background-color: #f7f7f7;
 
 $github-color: #242a2e;
@@ -189,13 +189,13 @@ $twitter-color: #1fa1f1;
   color: white;
   display: grid;
   text-align: center;
-  padding: 10em 4em 4em 4em;
+  padding: 10em 2em 4em 2em;
 }
 
 .meet {
   display: flex;
   margin: 0 auto;
-  width: 220px;
+  width: 69vw;
   font-size: 1.2em;
   font-weight: 400;
   color: $secondary-color;
