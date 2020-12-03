@@ -264,16 +264,14 @@ section {
   color: black;
   font-weight: bold;
   font-size: 1.3em;
-  margin-top: -0.4em;
-  display: block;
-  width: fit-content;
-  transition: box-shadow 0.4s ease-in-out 0s;
+  // margin-top: -0.4em;
+  // transition: box-shadow 0.4s ease-in-out 0s;
 
-  &:hover {
-    box-shadow: rgba($tertiary-color, 0.4) 0px 2px 0px 0px,
-      rgba($tertiary-color, 0.4) 0px -0.8em 0px 0px inset;
-    transition: box-shadow 0.4s ease-in-out 0s;
-  }
+  // &:hover {
+  //   box-shadow: rgba($tertiary-color, 0.4) 0px 2px 0px 0px,
+  //     rgba($tertiary-color, 0.4) 0px -0.8em 0px 0px inset;
+  //   transition: box-shadow 0.4s ease-in-out 0s;
+  // }
 }
 
 .featured-desc {
