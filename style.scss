@@ -195,7 +195,7 @@ $twitter-color: #1fa1f1;
 .meet {
   display: flex;
   margin: 0 auto;
-  width: 69vw;
+  width: 220px;
   font-size: 1.2em;
   font-weight: 400;
   color: $secondary-color;
@@ -224,18 +224,17 @@ section {
     width: 100%;
     border-radius: 0.5em;
     border: 1px solid rgb(240, 240, 240);
-    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out 0s,
-      background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+    // transition: transform 0.2s ease-in-out 0s,
+    //   background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: rgb(0 0 0 / 3%) 0px 0px 8px 0px,
-        rgb(0 0 0 / 10%) 0px 20px 30px 0px;
-      transition: transform 0.2s ease-in-out 0s,
-        background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
-    }
+    // &:hover {
+    //   transform: translateY(-5px);
+    //   box-shadow: rgb(0 0 0 / 3%) 0px 0px 8px 0px,
+    //     rgb(0 0 0 / 10%) 0px 20px 30px 0px;
+    //   transition: transform 0.2s ease-in-out 0s,
+    //     background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+    // }
   }
 }
 
@@ -327,10 +326,9 @@ section {
 }
 
 .portfolio-container a img {
-  border-radius: 1em;
+  border-radius: 0.5em;
   margin-bottom: 2em;
   border: 1px solid rgb(240, 240, 240);
-  border-radius: 8px;
   transition: transform 0.2s ease-in-out 0s,
     background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
 
@@ -652,5 +650,22 @@ section {
 
   .hero .content {
     padding: 9em 20em 6em 20em;
+  }
+}
+
+// ANIMATION *******************************************************************
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+  from {
+    transform: translate(0px, 0px);
+    z-index: 5;
+  }
+
+  to {
+    transform: translate(0px, 12px);
+    z-index: 5;
   }
 }

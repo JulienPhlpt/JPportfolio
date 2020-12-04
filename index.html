@@ -63,12 +63,37 @@
     <!-- BANNER -->
     <div class="hero">
       <div class="content">
-        <h1>Beautifully Crafted Web Experiences</h1>
-        <div class="meet">
+        <h1 class="stagger1">Beautifully Crafted Web Experiences</h1>
+        <div class="meet stagger1">
           <span>↓</span>
           <p>Meet Julien Philippot</p>
         </div>
-        <img class="scroll" src="images/scroll.svg" alt="Scroll" />
+        <svg
+          class="scroll stagger1"
+          data-name="scroll"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 12 22"
+        >
+          <defs>
+            <style>
+              .cls-1,
+              .cls-2 {
+                fill: #fff;
+              }
+              .cls-1 {
+                fill-rule: evenodd;
+              }
+            </style>
+          </defs>
+          <path
+            class="cls-1"
+            d="M6,.09C1.08.09,0,2.05,0,11S1.08,21.91,6,21.91,12,20,12,11,10.92.09,6,.09ZM6,1.4C2.72,1.4,2,3.13,2,11s.72,9.6,4,9.6,4-1.73,4-9.6S9.28,1.4,6,1.4Z"
+          />
+          <path
+            class="cls-2 circle"
+            d="M8,5A2.12,2.12,0,0,0,6,3,2.12,2.12,0,0,0,4,5,2.12,2.12,0,0,0,6,7,2.12,2.12,0,0,0,8,5Z"
+          />
+        </svg>
       </div>
       <img class="hero-design" src="images/shape.svg" alt="Shape" />
     </div>
@@ -199,5 +224,15 @@
       </p>
     </footer>
   </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+    integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw=="
+    crossorigin="anonymous"
+  ></script>
   <script src="app.js"></script>
 </html>
