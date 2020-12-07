@@ -331,10 +331,8 @@ section {
 }
 // CONTACT *********************************************************************
 .contact {
-  display: flex;
   margin: 0 auto;
   width: fit-content;
-  padding: 4em 10em;
   padding-bottom: 10em;
 
   .left-contact {
@@ -469,6 +467,10 @@ section {
 
   .hero {
     padding: 4em 4em 4em 4em;
+  }
+
+  .contact {
+    display: flex;
   }
 
   .footer ul {
