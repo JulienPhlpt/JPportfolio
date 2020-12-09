@@ -143,36 +143,36 @@ $twitter-color: #1fa1f1;
 }
 
 .fa-github {
-  color: black;
+  color: $primary-darker-color;
   font-size: 20px;
   transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
   &:hover {
-    color: $github-color;
+    color: $detail-color;
     transform: translateY(-2px);
     transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
   }
 }
 
 .fa-linkedin-in {
-  color: black;
+  color: $primary-darker-color;
   font-size: 20px;
   transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
   &:hover {
-    color: $linkedin-color;
+    color: $detail-color;
     transform: translateY(-2px);
     transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
   }
 }
 
 .fa-twitter {
-  color: black;
+  color: $primary-darker-color;
   font-size: 20px;
   transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
   &:hover {
-    color: $twitter-color;
+    color: $detail-color;
     transform: translateY(-2px);
     transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
   }
@@ -182,6 +182,7 @@ $twitter-color: #1fa1f1;
 .social-header,
 .hero-design {
   display: none;
+  background: $light-background-color;
 }
 
 .hero {
@@ -554,7 +555,7 @@ section {
     background: unset;
 
     .header {
-      background: $primary-darker-color;
+      background: $primary-color;
     }
   }
 
