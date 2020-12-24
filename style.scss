@@ -321,6 +321,7 @@ section {
   border: 1px solid rgb(240, 240, 240);
   transition: transform 0.2s ease-in-out 0s,
     background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+  height: 300px;
 
   &:hover {
     transform: translateY(-5px);
@@ -330,6 +331,14 @@ section {
       background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
   }
 }
+
+#xtinct,
+#ugoku,
+#toolwatch {
+  object-fit: cover;
+  object-position: top;
+}
+
 // CONTACT *********************************************************************
 .contact {
   margin: 0 auto;
@@ -642,11 +651,15 @@ section {
   }
 
   section {
-    padding: 10em 10em 4em 10em;
+    padding: 4em 10em 4em 10em;
   }
 
   .hero .content {
     padding: 6em 8em 6em 10em;
+  }
+
+  .contact {
+    padding-top: 3em;
   }
 
   .footer {
